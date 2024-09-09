@@ -1,7 +1,7 @@
 import sys
 from src.logger import logging
-
-def error_message_detail(error,error_detail:sys):
+var : int = "abc"
+def error_message_detail(error,error_detail:sys) -> str:
     _,_,exc_tb=error_detail.exc_info()
     file_name=exc_tb.tb_frame.f_code.co_filename
     error_message="Error occured in python script name [{0}] line number [{1}] error message[{2}]".format(
@@ -18,7 +18,6 @@ class CustomException(Exception):
     
     def __str__(self):
         return self.error_message
-
 
 if __name__ == "__main__":
     
